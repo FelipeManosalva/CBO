@@ -1,16 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
-
+import { LoginComponent } from './Login/login/login.component';
+import { RegistroFormComponent } from './Login/registro-form/registro-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegistroFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule,
+    
+  
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [RegistroFormComponent],
 })
 export class AppModule { }
