@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegistroFormComponent } from './Login/registro-form/registro-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GrillaPruebaComponent } from './grilla/grilla-prueba/grilla-prueba.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistroFormComponent
+    RegistroFormComponent,
+    GrillaPruebaComponent
   ],
   imports: [
     BrowserModule,

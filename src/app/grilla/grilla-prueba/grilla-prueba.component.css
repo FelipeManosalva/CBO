@@ -1,0 +1,14 @@
+.container
+{
+  max-width: 100%;
+}
+#a{
+height: 100%;
+width: 100%;   
+position: relative;
+overflow: hidden;
+}
+#bordes
+{
+  border-radius: 40px ;
+}
