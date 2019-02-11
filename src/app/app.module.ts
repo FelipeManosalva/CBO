@@ -7,12 +7,14 @@ import { LoginComponent } from './Login/login/login.component';
 import { RegistroFormComponent } from './Login/registro-form/registro-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GrillaPruebaComponent } from './grilla/grilla-prueba/grilla-prueba.component';
+import { NavbarCboComponent } from './navbar/navbar-cbo/navbar-cbo.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroFormComponent,
-    GrillaPruebaComponent
+    GrillaPruebaComponent,
+    NavbarCboComponent
   ],
   imports: [
     BrowserModule,
