@@ -8,13 +8,15 @@ import { RegistroFormComponent } from './Login/registro-form/registro-form.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GrillaPruebaComponent } from './grilla/grilla-prueba/grilla-prueba.component';
 import { NavbarCboComponent } from './navbar/navbar-cbo/navbar-cbo.component';
+import { ResultadosComponent } from './examenes/resultados/resultados.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroFormComponent,
     GrillaPruebaComponent,
-    NavbarCboComponent
+    NavbarCboComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,
