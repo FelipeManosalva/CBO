@@ -16,18 +16,29 @@
                 <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">FORMULARIO DE REGISTRO LABORATORIO CLINICO EN LINEA</h1>
                 <div class="alert alert-danger" role="alert" *ngIf="isError">
                 </div>
-                <div class="form-group">
-                  <input [(ngModel)]="rutid" type="text" id="rut" name="rut" class="form-control" placeholder="Ingrese su nombre" required>                  
+                <div class="row">
+                <div class="form-group col-md-9">
+                  <input [(ngModel)]="rutid" type="text" id="rut" name="rut" class="form-control" placeholder="Ingrese su rut" required>                  
                 </div>               
+                <div class="form-group col-md-3">
+                  <input [(ngModel)]="dvid" type="text" id="dv" name="dv" class="form-control" placeholder="DV" required>
+                </div>
+                </div>
                 <div class="form-group">
-                  <input [(ngModel)]="nombreid" type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su rut" required>
+                    <input [(ngModel)]="nombreid" type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre completo" required>
                 </div>
                 <div class="form-group">
                   <input [(ngModel)]="emaild" type="email" id="email" name="email" class="form-control" placeholder="Correo electronico" required>
-                </div>               
+                </div>   
+                <div class="form-group">
+                    <input [(ngModel)]="emaild2" type="email" id="email2" name="email" class="form-control" placeholder="Ingrese nuevamente su correo electronico" required>
+                  </div>            
                 <div class="form-group">
                   <input [(ngModel)]="password" type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
                 </div>
+                <div class="form-group">
+                    <input [(ngModel)]="password2" type="password" id="password2" name="password" class="form-control" placeholder="Ingrese nuevamente su contraseña" required>
+                  </div>
                 <div class="form-check">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input" value="consentimiento">Aceptar consentimiento
@@ -37,7 +48,6 @@
                 <div class="form-group">
                   <button class="btn  btn-warning btn btn-block" >Registrar <i class='fas fa-user-plus'></i></button>  
                 </div>
-                
                 <div>
                 </div>
               </form>
