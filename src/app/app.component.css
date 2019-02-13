@@ -1,0 +1,10 @@
+footer{
+    text-align: center;
+    color: rgb(145, 145, 145)
+}
+.fondo{
+    background: url(src/assets/img/cl.png) ;
+    background-position: center center;     
+    background-size: cover;
+    background-attachment: fixed;
+  } 

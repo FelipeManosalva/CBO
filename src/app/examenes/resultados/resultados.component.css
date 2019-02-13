@@ -1,0 +1,22 @@
+body.fondo{
+    background: url(src/assets/img/cl.png) ;
+    background-position: center center;     
+    background-size: cover;
+    background-attachment: fixed;
+  }      
+  .opacity{
+    background-color: rgba(255, 255, 255,0.6);  
+    width: 100% !important;  
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .container
+  {
+    max-width: 100%;
+  }
+  #a{
+  height: 100%;
+  width: 100%;   
+  position: relative;
+  overflow: hidden;
+  }
