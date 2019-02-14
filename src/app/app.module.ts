@@ -9,6 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GrillaPruebaComponent } from './grilla/grilla-prueba/grilla-prueba.component';
 import { NavbarCboComponent } from './navbar/navbar-cbo/navbar-cbo.component';
 import { ResultadosComponent } from './examenes/resultados/resultados.component';
+
+//service
+import { DataAPiService } from 'src/services/data-api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +30,9 @@ import { ResultadosComponent } from './examenes/resultados/resultados.component'
     
   
   ],
-  providers: [],
+  providers: [DataAPiService],
   bootstrap: [AppComponent],
   entryComponents: [RegistroFormComponent],
+
 })
 export class AppModule { }

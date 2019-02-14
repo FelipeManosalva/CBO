@@ -1,74 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
-  integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-</head>
-<body> 
-<section id="grilla" class="mb-5 mt-5">
-  <div class="container">
-    <div class="col-md-12 col-sm-12 col-md-12 mx-auto">
-       <div class="card_login" id="bordes">
-         <div class="card" id="bordes">
-           <div class="card-body text-center">
-             <form #formLogin="ngForm" (submit)="onLogin()">
-               <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">FORMULARIO PRUEBA</h1>
-               <div class="alert alert-danger" role="alert" *ngIf="isError">
-               </div>
-               <div class="row col-md-12">
-                 <div class="row col-md-12">
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato1id" type="text" id="dato1" name="dato1" class="form-control" placeholder="Ingrese su dato1" required>
-                   </div>
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato2id" type="text" id="dato2" name="dato2" class="form-control" placeholder="Ingrese su dato2" required>                        
-                   </div>                
-                 </div>  
-                 <br>
-                 <br>             
-                 <div class="row col-md-12">
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato3id" type="text" id="dato3" name="dato3" class="form-control" placeholder="Ingrese su dato3" required>
-                   </div>
-                 <div class="col-md-6">
-                   <input [(ngModel)]="dato4id" type="text" id="dato4" name="dato4" class="form-control" placeholder="Ingrese su dato4" required>  
-                 </div>
-                 </div>
-                 <br>
-                 <br>
-                 <div class="row col-md-12">
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato5id" type="text" id="dato5" name="dato5" class="form-control" placeholder="Ingrese su dato5" required>
-                   </div>
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato6id" type="text" id="dato6" name="dato6" class="form-control" placeholder="Ingrese su dato6" required> 
-                   </div>
-                 </div>
-                 <br>
-                 <br>  
-                 <div class="row col-md-12">
-                   <div class="col-md-6">
-                     <input [(ngModel)]="dato7id" type="text" id="dato7" name="dato7" class="form-control" placeholder="Ingrese su dato7" required>
-                   </div>        
-                 <div class="col-md-6">
-                   <input [(ngModel)]="dato8id" type="text" id="dato8" name="dato8" class="form-control" placeholder="Ingrese su dato8" required>
-                 </div>
-                 </div>
-                 <br>
-                 <div class="form-group" class="text-center">
-                   <br>
-                  <button class="btn  btn-warning btn btn-block" >Botón <i class='fas fa-user-plus'></i></button>  
-                 </div>
-                 <div>
-               </div>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-    </div>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row">
+  <div class="col"></div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Idioma</th>
+          <th>Precio</th>
+          <th>Oferta</th>
+          <th> </th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Titulo libro</td>
+          <td>AUTOR LIBRO</td>
+          <td>IDIOMA LIBRO</td>
+          <td>PRECIO</td>
+          <td>OFERTA</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</section>
-</body>
-</html>
+</div>
