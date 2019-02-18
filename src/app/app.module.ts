@@ -16,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes=[
   { path: '',component: LoginComponent},
-  {path: 'resultados', component: ResultadosComponent}
+  {path: 'resultados', component: ResultadosComponent},
+  {path: 'grilla', component: GrillaPruebaComponent}
 ];
 @NgModule({
   declarations: [

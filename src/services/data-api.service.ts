@@ -8,11 +8,18 @@ import {BookInterface} from '../../src/app/models/book-interface';
 export class DataAPiService {
 
   constructor(private http: HttpClient) {}
+  headers : HttpHeaders = new HttpHeaders(
+    {
+      "Content-Type": "aplication/json",
+
+    }
+  )
   books: Observable<any>;
   book: Observable<any>;
+
   getAllBooks()
   {
-    const url_api = 'https://chilealerta.com/api/query/?user=demo&select=ultimos_sismos&limit=50&country=Chile';
+    const url_api = 'https://feriados-cl-api.herokuapp.com/feriados';
     return this.http.get(url_api);
     
   }

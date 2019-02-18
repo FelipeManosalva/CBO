@@ -1,31 +1,22 @@
 <br>
 <br>
 <br>
-
-{{books|json}}
 <div class="container">
 <div class="row">
   <div class="col"></div>
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Hora</th>
-          <th></th>
-          <th>Autor</th>
-          <th>Idioma</th>
-          <th>Precio</th>
-          <th>Oferta</th>
-          <th> </th>
-          <th> </th>
+          <th>Fecha</th>
+          <th>Titulo</th>
+          <th>Extra</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{books.chilean_time}}Titulo libro</td>
-          <td>{{books.reference}} </td>
-          <td>{{books.magnitude}}</td>
-          <td>PRECIO</td>
-          <td>OFERTA</td>
+        <tr *ngFor ="let book of books">
+          <td>{{books.date}}</td>
+          <td>{{books.title}} </td>
+          <td>{{books.extra}}</td>
         </tr>
       </tbody>
     </table>

@@ -1,5 +1,5 @@
 
-<div *ngIf="mostrar">
+<div *ngIf="!mostrar">
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-info navbar fixed-top">
     <a class="navbar-brand" href="www.clinicaalemanaosorno.cl/wps/index.php/en/"><img src="/assets/img/navbar.png"/> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a id="gris" class="dropdown-item"   href="http://www.clinicaalemanaosorno.cl/wps/index.php/en/homepage/presupuestos.html">Presupuestos<span class="glyphicon glyphicon-menu-right"></span></a>
-            <a id="gris" class="dropdown-item"  href="/resultados">Resultados de Exámenes</a>
+            <a id="gris" class="dropdown-item"  [routerLink] ="['login']">Resultados de Exámenes</a>
             <a id="gris" class="dropdown-item"  href="www.clinicaalemanaosorno.cl/wps/index.php/en/homepage/aranceles.html">Aranceles Clínica Alemana</a>
             <a id="gris" class="dropdown-item"  href="www.clinicaalemanaosorno.cl/wps/index.php/en/homepage/fotografias-recien-nacido.html">Fotografías Recién Nacidos</a>
             <a id="gris" class="dropdown-item"  href="http://www.clinicaalemanaosorno.cl/wps/index.php/en/homepage/atencion-socios.html">Atención Socios</a>
