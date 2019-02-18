@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataAPiService } from '../../../services/data-api.service';
-import {BookInterface} from '../../../app/models/book-interface';
+import {FeriadosInterface} from '../../../app/models/book-interface';
 
 @Component({
   selector: 'app-grilla-prueba',
@@ -10,15 +10,15 @@ import {BookInterface} from '../../../app/models/book-interface';
 export class GrillaPruebaComponent implements OnInit {
 
   constructor(private dataApi: DataAPiService) { }
-  private books : BookInterface; 
+  private books : FeriadosInterface; 
   
   ngOnInit() {
-    this.getListBooks();
+    this.getListFeriados();
   }
-  getListBooks()
+  getListFeriados()
   {
-   this.dataApi.getAllBooks()
-   .subscribe((books: BookInterface) => (this.books=books));
+   this.dataApi.getAllFeriados()
+   .subscribe((books: FeriadosInterface) => (this.books=books));
     
   }
 }

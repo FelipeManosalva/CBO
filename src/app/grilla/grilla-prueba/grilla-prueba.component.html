@@ -8,15 +8,15 @@
       <thead>
         <tr>
           <th>Fecha</th>
-          <th>Titulo</th>
-          <th>Extra</th>
+          <th>Motivo</th>
+          <th>Tipo</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor ="let book of books">
-          <td>{{books.date}}</td>
-          <td>{{books.title}} </td>
-          <td>{{books.extra}}</td>
+          <td>{{book.date}}</td>
+          <td>{{book.title}} </td>
+          <td>{{book.extra}}</td>
         </tr>
       </tbody>
     </table>

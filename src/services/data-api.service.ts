@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient , HttpHeaders} from '@angular/common/http/';
 import {Observable} from 'rxjs/internal/Observable';
-import {BookInterface} from '../../src/app/models/book-interface';
+import {FeriadosInterface} from '../../src/app/models/book-interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +17,7 @@ export class DataAPiService {
   books: Observable<any>;
   book: Observable<any>;
 
-  getAllBooks()
+  getAllFeriados()
   {
     const url_api = 'https://feriados-cl-api.herokuapp.com/feriados';
     return this.http.get(url_api);
