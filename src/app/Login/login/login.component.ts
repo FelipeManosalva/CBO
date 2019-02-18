@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { RegistroFormComponent } from '../registro-form/registro-form.component';
+
 declare var jQuery:any;
 declare var $:any;
 
