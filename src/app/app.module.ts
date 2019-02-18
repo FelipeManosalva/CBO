@@ -12,7 +12,7 @@ import { ResultadosComponent } from './examenes/resultados/resultados.component'
 
 //service
 import { DataAPiService } from 'src/services/data-api.service';
-
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +27,10 @@ import { DataAPiService } from 'src/services/data-api.service';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
-    
+    HttpClientModule,
   
   ],
-  providers: [DataAPiService],
+  providers: [DataAPiService, HttpClientModule],
   bootstrap: [AppComponent],
   entryComponents: [RegistroFormComponent],
 
