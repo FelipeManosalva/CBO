@@ -15,10 +15,12 @@ import {HttpClientModule} from '@angular/common/http';
 import { TablaComponent } from './datosget/tabla/tabla.component';
 
 const appRoutes: Routes=[
-  { path: '',component: LoginComponent},
+  {path: '',component: LoginComponent},
+  {path: 'login',component: LoginComponent},
   {path: 'resultados', component: ResultadosComponent},
   {path: 'tabla', component: TablaComponent}
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
