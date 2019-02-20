@@ -2,24 +2,29 @@
 <br>
 <br>
 <br>
-<div class="container opacity" >
+<div class="container opacity col-md-12" >
 <div class="row">
-  <div class="col"></div>
+  <div class="col-md-3"></div>
     <table datatable class="table table-bodered display"  >
       <thead>
         <tr>
-          <th>Fecha</th>
-          <th>Motivo</th>
-          <th>Tipo</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Motivo</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Accion</th>
+         
         </tr>
       </thead>
       <tbody>
         <tr *ngFor ="let book of books">
-          <td>{{book.date}}</td>
-          <td>{{book.title}} </td>
-          <td>{{book.extra}}</td>
+          <td scope="row">{{book.date}}</td>
+          <td scope="row">{{book.title}}</td>
+          <td scope="row">{{book.extra}}</td>
+          <td><button class="btn btn-primary" (click)="onPreUpdateFeriado(book)" 
+          data-toggle="modal" data-target="#modalBook">Cargar datos </button></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+<app-cargadatos></app-cargadatos>

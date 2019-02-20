@@ -17,6 +17,12 @@ export class DataAPiService {
   books: Observable<any>;
   book: Observable<any>;
 
+  public selectedFeriado: FeriadosInterface =  {
+  date: '',
+  title: '',
+  extra: '',
+  };
+
   getAllFeriados()
   {
     const url_api = 'https://feriados-cl-api.herokuapp.com/feriados';

@@ -13,6 +13,7 @@ import {DataTablesModule} from 'angular-datatables';
 import { DataAPiService } from 'src/services/data-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { TablaComponent } from './datosget/tabla/tabla.component';
+import { CargadatosComponent } from './modaldatos/cargadatos/cargadatos.component';
 
 const appRoutes: Routes=[
   {path: '',component: LoginComponent},
@@ -28,7 +29,8 @@ const appRoutes: Routes=[
     RegistroFormComponent,
     NavbarCboComponent,
     ResultadosComponent,
-    TablaComponent
+    TablaComponent,
+    CargadatosComponent
   ],
     exports: [RouterModule],
 
@@ -40,7 +42,7 @@ const appRoutes: Routes=[
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),
-    DataTablesModule
+    DataTablesModule,
   ],
   providers: [DataAPiService, HttpClientModule],
   bootstrap: [AppComponent],

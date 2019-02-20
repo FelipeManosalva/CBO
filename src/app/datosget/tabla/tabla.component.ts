@@ -1,8 +1,10 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { DataAPiService } from '../../../services/data-api.service';
 import { FeriadosInterface } from '../../../app/models/book-interface';
+import { DataTableDirective } from 'angular-datatables';
 
 declare var $;
+
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
@@ -10,20 +12,26 @@ declare var $;
 })
 export class TablaComponent implements OnInit {
   
-  @ViewChild('tabladatos')
-  table: ElementRef;
-  tabladatos: any;
+  @ViewChild('dataTable') table: ElementRef;
+  dataTable: any;
+  
   constructor(private dataApi: DataAPiService) { }
   private books: FeriadosInterface;
-  ngOnInit() {
-    this.getListFeriados();
-    this.tabladatos = $(this.table.nativeElement);
-    this.tabladatos.tabladatos();
-  }
   
+  ngOnInit(): void{
+   
+    this.getListFeriados();
+    this.dataTable= $(this.table.nativeElement);
+    this.dataTable.dataTable();
+  }
+
   getListFeriados() {
     this.dataApi.getAllFeriados()
       .subscribe((books: FeriadosInterface) => (this.books = books));
+  }
+  
+  onPreUpdateFeriado (book: FeriadosInterface): void{
+    this.dataApi.selectedFeriado = Object.assign({}, book);
   }
 
 }
