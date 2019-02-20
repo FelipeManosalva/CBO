@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataAPiService } from '../../../services/data-api.service';
-import { FeriadosInterface } from '../../../app/models/book-interface';
-import {NgForm} from '@angular/forms';
+
 import {Location} from '@angular/common';
 
 @Component({

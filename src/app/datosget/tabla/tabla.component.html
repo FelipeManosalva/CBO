@@ -3,9 +3,9 @@
 <br>
 <div class="container opacity col-md-12" >
 <div class="row">
-  <div class="col-md-3"></div>
-    <table datatable class="table table-bodered display"  >
-      <thead>
+  <div class=" col-md-2 "></div>
+    <table datatable class="table table-bordered  table-info table-striped" >
+      <thead thead-dark>
         <tr>
           <th scope="col">Fecha</th>
           <th scope="col">Motivo</th>
@@ -13,7 +13,7 @@
           <th scope="col">Accion</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody tbody-dark>
         <tr *ngFor ="let book of books">
           <td scope="row">{{book.date}}</td>
           <td scope="row">{{book.title}}</td>

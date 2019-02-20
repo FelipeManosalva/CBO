@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { DataAPiService } from '../../../services/data-api.service';
 import { FeriadosInterface } from '../../../app/models/book-interface';
-import { DataTableDirective } from 'angular-datatables';
+
 
 declare var $;
 
