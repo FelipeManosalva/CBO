@@ -1,0 +1,13 @@
+.bordes
+{
+  border-radius: 20px ;
+}
+.modal-content {
+    background-color: rgb(185, 211, 255);
+  }
+  .modal-header {
+    background-color: rgb(185, 211, 255);
+  }
+  .modal-body {
+    background-color: rgb(185, 211, 255);
+  }
