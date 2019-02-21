@@ -20,18 +20,21 @@ export class TablaComponent implements OnInit {
   
   ngOnInit(): void{
    
+    
     this.getListFeriados();
     this.dataTable= $(this.table.nativeElement);
     this.dataTable.dataTable();
   }
 
   getListFeriados() {
-    this.dataApi.getAllFeriados()
-      .subscribe((books: FeriadosInterface) => (this.books = books));
+    this.dataApi.getAllFeriados().subscribe((books: FeriadosInterface) => (this.books = books));
+    
   }
   
   onPreUpdateFeriado (book: FeriadosInterface): void{
     this.dataApi.selectedFeriado = Object.assign({}, book);
   }
 
+   
 }
+

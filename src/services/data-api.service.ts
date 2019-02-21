@@ -18,9 +18,9 @@ export class DataAPiService {
   book: Observable<any>;
 
   public selectedFeriado: FeriadosInterface =  {
-  date: '',
+  date: "",
   title: '',
-  extra: '',
+  extra:'',
   };
 
   getAllFeriados()
@@ -30,3 +30,4 @@ export class DataAPiService {
     
   }
 }
+
