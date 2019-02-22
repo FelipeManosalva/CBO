@@ -18,7 +18,13 @@ overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
 }
-th { font-size: 11px; }
-td { font-size: 11px; }
+th 
+{
+    font-size: 11px; 
+}
+td 
+{ 
+  font-size: 11px; 
+}
 
 
