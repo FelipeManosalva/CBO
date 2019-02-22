@@ -11,8 +11,8 @@ import {Location} from '@angular/common';
 export class CargadatosComponent implements OnInit {
 
   constructor(
-    private dataApi: DataAPiService, 
-    private location: Location)
+    public dataApi: DataAPiService, 
+    public location: Location)
   {
 
   }

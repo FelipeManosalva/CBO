@@ -9,20 +9,20 @@
               <div class="card_content">
                 <div class="card-body text-center">
                   <form #formLogin="ngForm" >
-                    <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Laboratorio Clinico</h1>
+                    <h1 class="h3 mb-3 font-weight-normal" >Laboratorio Clinico</h1>
                       <div class="form-group">
-                        <input [(ngModel)]="emaild" type="email" id="email" name="email" class="form-control" placeholder="Correo electronico" >
+                        <input  type="email" id="email" name="email" class="form-control" placeholder="Correo electronico" >
                       </div>               
                       <div class="form-group">
-                        <input [(ngModel)]="passwordid" type="password" id="password" name="password" class="form-control" maxlength="20" placeholder="Contraseña">
+                        <input  type="password" id="password" name="password" class="form-control" maxlength="20" placeholder="Contraseña">
                       </div>
                         <button type="submit" class="btn btn btn-info btn-block" >Ingresar <i class='fas fa-user-check'></i></button>
                         <br>
                       <div class="form-group">
-                      <button class="btn  btn-warning btn btn-block" (click)="Registro()">Registrese <i class='fas fa-user-edit'></i></button>  
+                      <button class="btn  btn-warning btn btn-block" >Registrese <i class='fas fa-user-edit'></i></button>  
                       </div>
                       <div class="form-group">
-                      <button class="btn  btn-warning btn btn-block" (click)="Registro()">Recuperar contraseña <i class="fa fa-lightbulb-o"></i></button>  
+                      <button class="btn  btn-warning btn btn-block" >Recuperar contraseña <i class="fa fa-lightbulb-o"></i></button>  
                       </div>
                   </form>
                 </div>

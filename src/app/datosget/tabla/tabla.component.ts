@@ -15,8 +15,8 @@ export class TablaComponent implements OnInit {
   @ViewChild('dataTable') table: ElementRef;
   dataTable: any;
   
-  constructor(private dataApi: DataAPiService) { }
-  private books: FeriadosInterface;
+  constructor(public dataApi: DataAPiService) { }
+  public books: FeriadosInterface;
   
   ngOnInit(): void{
    
