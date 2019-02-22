@@ -10,17 +10,17 @@
         <tr>
           <th scope="col">Fecha</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Motivo</th>
-          <th scope="col">Accion</th>
+          <th class="hidden" scope="col">Motivo</th>
+          <th style="display:none;" scope="col">Accion</th>
         </tr>
       </thead>
       <tbody tbody-dark>
         <tr *ngFor ="let book of books">
           <td scope="row">{{book.date}}</td>
           <td scope="row">{{book.title}}</td>
-          <td scope="row">{{book.extra}}</td>
-          <td><button class="btn btn-primary btn-sm" (click)="onPreUpdateFeriado(book)" 
-          data-toggle="modal" data-target="#modalBook">Datos </button></td>
+          <td style="display: none;" scope="row">{{book.extra}}</td>
+          <td ><button class="btn btn-primary btn-xs" (click)="onPreUpdateFeriado(book)" 
+          data-toggle="modal" data-target="#modalBook">Datos prueba </button></td>
         </tr>
       </tbody>
     </table>
