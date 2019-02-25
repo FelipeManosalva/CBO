@@ -3,6 +3,7 @@ import { DataAPiService } from '../../../services/data-api.service';
 import { FeriadosInterface } from '../../../app/models/book-interface';
 
 
+
 declare var $;
 
 @Component({
@@ -11,8 +12,8 @@ declare var $;
   styleUrls: ['./tabla.component.css']
 })
 export class TablaComponent implements OnInit {
-  
-  @ViewChild('dataTable') table: ElementRef;
+
+    @ViewChild('dataTable') table: ElementRef;
   dataTable: any;
   
   constructor(public dataApi: DataAPiService) { }
