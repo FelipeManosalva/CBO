@@ -14,7 +14,8 @@
         </tr>
       </thead>
       <tbody tbody-dark>
-        <tr *ngFor ="let book of books">
+         
+        <tr *ngFor ="let book of books" >
           <td scope="row">{{book.date}}</td>
           <td scope="row">{{book.title}}</td>
           <td  scope="row">{{book.extra}}</td>
@@ -23,6 +24,10 @@
         </tr>
       </tbody>
     </table>
+    
   </div>
 </div>
+
+
+<app-resultados *ngFor ="let book of books"[datos]="book"></app-resultados>
 <app-cargadatos></app-cargadatos>

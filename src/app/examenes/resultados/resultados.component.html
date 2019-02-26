@@ -1,35 +1,7 @@
-<body class="fondo">
-    <br>
-    <br>     
-  <div class="container opacity">
-    <section id="login" class="mb-5 mt-5">
-        <div id="a">
-          <div class="col-xs-4 col-sm-4 col-md-4 mx-auto">
-            <div class="card" id= "bordes">
-              <div class="card_content">
-                <div class="card-body text-center">
-                  <form #formLogin="ngForm" >
-                    <h1 class="h3 mb-3 font-weight-normal" >Laboratorio Clinico</h1>
-                      <div class="form-group">
-                        <input  type="email" id="email" name="email" class="form-control" placeholder="Correo electronico" >
-                      </div>               
-                      <div class="form-group">
-                        <input  type="password" id="password" name="password" class="form-control" maxlength="20" placeholder="Contraseña">
-                      </div>
-                        <button type="submit" class="btn btn btn-info btn-block" >Ingresar <i class='fas fa-user-check'></i></button>
-                        <br>
-                      <div class="form-group">
-                      <button class="btn  btn-warning btn btn-block" >Registrese <i class='fas fa-user-edit'></i></button>  
-                      </div>
-                      <div class="form-group">
-                      <button class="btn  btn-warning btn btn-block" >Recuperar contraseña <i class="fa fa-lightbulb-o"></i></button>  
-                      </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> 
-    </section>
-  </div>
-  </body>
+<tr>
+<td scope="row">{{book.date}}</td>
+<td scope="row">{{book.title}}</td>
+<td  scope="row">{{book.extra}}</td>
+<td ><button class="btn btn-primary btn-xs" (click)="onPreUpdateFeriado(book)" 
+data-toggle="modal" data-target="#modalBook">Datos prueba  2</button></td>
+</tr>

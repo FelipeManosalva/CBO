@@ -13,6 +13,8 @@ declare var $;
 })
 export class TablaComponent implements OnInit {
 
+ 
+   
     @ViewChild('dataTable') table: ElementRef;
   dataTable: any;
   
@@ -28,7 +30,8 @@ export class TablaComponent implements OnInit {
   }
 
   getListFeriados() {
-    this.dataApi.getAllFeriados().subscribe((books: FeriadosInterface) => (this.books = books));
+    this.dataApi.getAllFeriados().
+    subscribe((books: FeriadosInterface) => (this.books = books));
     
   }
   

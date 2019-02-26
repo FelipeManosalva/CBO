@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { FeriadosInterface } from 'src/app/models/book-interface';
 
 @Component({
   selector: 'app-resultados',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadosComponent implements OnInit {
 
+
+
   constructor() { }
 
+  @Input ('datos') book:FeriadosInterface;
+  
   ngOnInit() {
   }
 
