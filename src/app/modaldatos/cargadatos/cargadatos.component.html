@@ -10,12 +10,12 @@
       <div class="modal-body">
         <form class="form-book" #formBook="ngForm" >
          <ul class="nav nav-tabs" id="tabContent">
-           <li><a href="#details" data-toggle="tab">Details</a></li>
-           <li><a href="#access-security" data-toggle="tab">Access / Security</a></li>
-           <li><a href="#networking" data-toggle="tab">Networking</a></li>
+           <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
+           <li><a href="#TABDOS" data-toggle="tab">TABDOS</a></li>
+           <li><a href="#TABTRES" data-toggle="tab">TABTRES</a></li>
          </ul>
          <div class="tab-content">
-          <div class="tab-pane active" id="details">
+          <div class="tab-pane active" id="TABUNO">
             <div class="form-row">
               <div class="form-group col-md-6">
               <label for="extra">Nombre</label>
@@ -36,7 +36,7 @@
                 </select>
             </div>
           </div>
-          <div class="tab-pane" id="access-security">
+          <div class="tab-pane" id="TABDOS">
             <div class="form-group">
               <label for="extra">Nombre</label>
               <input type="text" id="title" name="title" class="form-control" placeholder="title" [(ngModel)]="this.dataApi.selectedFeriado.title" readonly="readonly">
@@ -44,7 +44,7 @@
               <input type="text" id="extra" name="extra" class="form-control" placeholder="extra" [(ngModel)]="this.dataApi.selectedFeriado.extra" readonly="readonly">
             </div> 
           </div> 
-          <div class="tab-pane" id="networking">
+          <div class="tab-pane" id="TABTRES">
             <div class="form-group">
               <label for="date">Fecha</label>
               <input type="text" id="date" name="date" class="form-control" placeholder="Titulo" [(ngModel)]="this.dataApi.selectedFeriado.date" readonly="readonly">
