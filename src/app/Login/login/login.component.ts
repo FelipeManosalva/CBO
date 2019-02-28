@@ -45,8 +45,8 @@ console.log(tokenInfo); // consola
 }
 
 guardarlocalstorage(){
-  let tokenInfo;
-  localStorage.setItem("informacion", tokenInfo);
+  let tokenInfo:string;
+  localStorage.setItem("informacion", JSON.stringify(tokenInfo));
   
 }
 }
