@@ -20,6 +20,10 @@ public token:string;
 
   ngOnInit() {
     this.token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';    
+    this.funcion();
+
+    
+    
   }
 Registro()
 {
@@ -35,7 +39,7 @@ getDecodedAccessToken(token: string): any {
 }
 
 funcion(){
-let tokenInfo = this.getDecodedAccessToken(token); // decode token
+let tokenInfo = this.getDecodedAccessToken(this.token); // decode token
 let expireDate = tokenInfo.exp; // get token expiration dateTime
 console.log(tokenInfo); // show decoded token object in console
 }
