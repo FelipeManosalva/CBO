@@ -16,20 +16,20 @@ export class LoginComponent implements OnInit {
   
 public token:string;
 
-  constructor(public modalService: NgbModal) { }
+  constructor(public modalService: NgbModal) { 
+    
+  }
 
   ngOnInit() {
-    this.token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';    
-    this.funcion();
-
-    
-    
+    this.token='eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMzUyMjIwNCIsInN0YXR1cyI6IkxvZ2luIE9LIiwiYXBlbGxpZG8iOiJydWl6In0.xpRKgE-BWZ_s9uNvsY9bL64bUwYPcoq5fQ6pmrAvPcg8pC8lWAT59SxfA2vrTo8GOepl56zOFERAkxmDT9LSSw';    
+    this.decodificarToken();
+    this.guardarlocalstorage();
   }
 Registro()
 {
 const modal = this.modalService.open(RegistroFormComponent);
 }
-getDecodedAccessToken(token: string): any {
+decodificar(token: string): any {
   try{
       return jwt_decode(token);
   }
@@ -37,11 +37,18 @@ getDecodedAccessToken(token: string): any {
       return null;
   }
 }
-
-funcion(){
-let tokenInfo = this.getDecodedAccessToken(this.token); // decode token
-let expireDate = tokenInfo.exp; // get token expiration dateTime
-console.log(tokenInfo); // show decoded token object in console
-}
+decodificarToken(){
+let tokenInfo = this.decodificar(this.token); // decodificar token
+let expireDate = tokenInfo.exp; // fehca expiracion
+console.log(tokenInfo); // consola
 
 }
+
+guardarlocalstorage(){
+  let tokenInfo;
+  localStorage.setItem("informacion", tokenInfo);
+  
+}
+}
+
+
