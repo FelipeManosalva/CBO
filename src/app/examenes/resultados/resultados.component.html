@@ -4,9 +4,11 @@
 <div class="container opacity col-md-12" >
 <div class="row">
   <div class=" col-md-2 table-responsive" ></div>
-    <table datatable class="table table-bordered  table-info table-striped" >
+    <table datatable #datatable class="table table-bordered  table-info table-striped" >
       <thead thead-dark>
+          <button type="button" (click)="genPDF()">Exportar a PDF </button>
         <tr>
+            
           <th scope="col">Fecha</th>
           <th scope="col">Nombre</th>
           <th class="hidden" scope="col">Motivo</th>
@@ -20,9 +22,13 @@
         <td  scope="row">{{book.extra}}</td>
         <td ><button class="btn btn-primary btn-xs" (click)="onPreUpdateFeriado(book)" 
         data-toggle="modal" data-target="#modalBook">Datos prueba  2</button></td>
+        
       </tr>
+      
       </tbody>
     </table>
+    
   </div>
 </div>
+
 <app-cargadatos></app-cargadatos>

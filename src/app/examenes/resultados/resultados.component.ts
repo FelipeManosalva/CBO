@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
 import { FeriadosInterface } from 'src/app/models/book-interface';
 import { DataAPiService } from 'src/services/data-api.service';
-import { decode } from 'punycode';
-import {token} from '../../../../node_modules/jwt-decode';
+import * as jsPDF from 'jspdf';
+import * as html2canvas from 'html2canvas';
 @Component({
   selector: 'app-resultados',
   templateUrl: './resultados.component.html',
@@ -11,8 +11,8 @@ import {token} from '../../../../node_modules/jwt-decode';
 export class ResultadosComponent implements OnInit {
   @Input ('datos') book:FeriadosInterface;
 
-  @ViewChild('dataTable') table: ElementRef;
-  dataTable: any;
+  @ViewChild('datatable') content :  ElementRef;
+  datatable: any;
   
   constructor(public dataApi: DataAPiService) { }
   public books: FeriadosInterface;
@@ -21,8 +21,8 @@ export class ResultadosComponent implements OnInit {
    
     
     this.getListFeriados();
-    this.dataTable= $(this.table.nativeElement);
-    this.dataTable.dataTable();
+    this.datatable= $(this.datatable.nativeElement);
+    this.datatable.dataTable();
   }
 
   getListFeriados() {
@@ -34,9 +34,16 @@ export class ResultadosComponent implements OnInit {
   onPreUpdateFeriado (book: FeriadosInterface): void{
     this.dataApi.selectedFeriado = Object.assign({}, book);
   }
-
-  
-  
-  
-
+ genPDF()
+ {
+   html2canvas(document.body,{
+     onrendered : function (canvas){
+     var img= canvas.toDataURL("assets/img")
+     var doc = new jsPDF();
+     doc.addImage(img, 'JPEG',20,20);      
+     doc.save('test pdf');
+  }}
+    );
+ }
+ 
 }
