@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
 import { FeriadosInterface } from 'src/app/models/book-interface';
 import { DataAPiService } from 'src/services/data-api.service';
-import * as $ from 'jquery';
+import * as jsPDF from 'jspdf';
+import * as html2canvas from 'html2canvas';
 
 declare var xepOnline:any;
 
@@ -12,10 +13,20 @@ declare var xepOnline:any;
 })
 export class ResultadosComponent implements OnInit {
   
-  public genPDF()
-  {
-    return xepOnline.Formatter.Format('content',{render:'download'});
-  }
+  generarPDF(){
+    html2canvas(document.getElementById('contenido'), {
+       // Opciones
+       allowTaint: true,
+       useCORS: false,
+       // Calidad del PDF
+       scale: 1
+    }).then(function(canvas) {
+    var img = canvas.toDataURL("image/png");
+    var doc = new jsPDF();
+    doc.addImage(img,'PNG',7, 20, 195, 105);
+    doc.save('postres.pdf');
+   });
+}
 
   @Input ('datos') book:FeriadosInterface;
   
