@@ -4,13 +4,19 @@ import { DataAPiService } from 'src/services/data-api.service';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 
+import * as XLSX from 'xlsx';
+
+
+
+
 @Component({
   selector: 'app-resultados',
   templateUrl: './resultados.component.html',
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-  
+ 
+
   generarPDF(){
     html2canvas(document.getElementById('contenido'), {
       allowTaint: true,
@@ -23,11 +29,15 @@ export class ResultadosComponent implements OnInit {
       doc.save('datospdf.pdf');
    });
 }
+ 
   @Input ('datos') book:FeriadosInterface;
   @ViewChild('datatable') content :  ElementRef;
   datatable: any;
-
+  
+  
   constructor(public dataApi: DataAPiService) { }
+
+  
   public books: FeriadosInterface;
   public ngOnInit(): void{
     this.getListFeriados();
@@ -43,4 +53,17 @@ export class ResultadosComponent implements OnInit {
   onPreUpdateFeriado (book: FeriadosInterface): void{
     this.dataApi.selectedFeriado = Object.assign({}, book);
   }
+
+  fireEvent()
+  {
+    const ws: XLSX.WorkSheet=XLSX.utils.table_to_sheet(this.datatable.nativeElement);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    
+    /* save to file */
+    XLSX.writeFile(wb, 'SheetJS.xlsx');
+    
+  }
+
+ 
 }

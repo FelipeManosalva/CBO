@@ -9,6 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarCboComponent } from './navbar/navbar-cbo/navbar-cbo.component';
 import { ResultadosComponent } from './examenes/resultados/resultados.component';
 import {DataTablesModule} from 'angular-datatables';
+
+
 //service
 import { DataAPiService } from 'src/services/data-api.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -43,6 +45,7 @@ const appRoutes: Routes=[
     RouterModule,
     RouterModule.forRoot(appRoutes),
     DataTablesModule,
+   
   ],
   providers: [DataAPiService, HttpClientModule],
   bootstrap: [AppComponent],

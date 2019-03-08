@@ -1,3 +1,4 @@
+
 <div  id="modalBook" class="modal fade bordes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -8,7 +9,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="form-book" #formBook="ngForm" >
+          <div  class="col text-center">
+              <button type="button" (click)="PDF()"> <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></button>
+              <button type="button" (click)="fireEvent()"><i class="fa fa-file-excel-o" style="font-size:48px;color:green"></i></button>
+            </div>
+        <form id="contenidomodal" class="form-book" #formBook="ngForm" >
          <ul class="nav nav-tabs" id="tabContent">
            <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
            <li><a href="#TABDOS" data-toggle="tab">TABDOS</a></li>
