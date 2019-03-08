@@ -13,7 +13,7 @@
               <button type="button" (click)="PDF()"> <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></button>
               <button type="button" (click)="fireEvent()"><i class="fa fa-file-excel-o" style="font-size:48px;color:green"></i></button>
             </div>
-        <form id="contenidomodal" class="form-book" #formBook="ngForm" >
+        <form id="contenidomodal" class="form-book" #formBook="ngForm" [formGroup]="form">
          <ul class="nav nav-tabs" id="tabContent">
            <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
            <li><a href="#TABDOS" data-toggle="tab">TABDOS</a></li>
@@ -57,9 +57,11 @@
           </div>
             <div class="form-group">
               <label for="descripcion">Descripcion</label>
-              <textarea name="descripcion" id="descripcion" class="form-control" cols="50" rows="6" ></textarea>
+              <textarea name="descripcion" id="descripcion" class="form-control" cols="50" rows="6" formControllerName="desc" ></textarea>
               <br>
-              <button type="submit" class="btn btn-primary float-right">Guardar cambios</button>
+              <button type="submit" class="btn btn-primary float-right" (click)="Guarda" >Guardar cambios</button>
+              
+              <button type="submit" class="btn btn-primary float-right" data-dismiss="modal" >Cancelar</button>
             </div>
          </div>
         </form>

@@ -3,6 +3,9 @@ import { DataAPiService } from '../../../services/data-api.service';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import {Location} from '@angular/common';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-cargadatos',
@@ -10,6 +13,8 @@ import {Location} from '@angular/common';
   styleUrls: ['./cargadatos.component.css']
 })
 export class CargadatosComponent implements OnInit {
+  form: FormGroup;
+
   PDF(){
     html2canvas(document.getElementById('contenidomodal'), {
       allowTaint: true,
@@ -24,11 +29,25 @@ export class CargadatosComponent implements OnInit {
 }
   constructor(
     public dataApi: DataAPiService, 
-    public location: Location)
+    public location: Location,
+    public fb : FormBuilder )
+    
   {
+this.formControlls();
+  }
+  formControlls()
+  {
+    this.form = this.fb.group({
+        desc:'',
+
+    })
 
   }
 
+  Guardar()
+  {
+       
+  }
   ngOnInit() {
   }
 
