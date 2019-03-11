@@ -3,9 +3,7 @@ import { DataAPiService } from '../../../services/data-api.service';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import {Location} from '@angular/common';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
-import { FeriadosInterface } from '../../models/book-interface';
 import {ToastrService} from 'ngx-toastr';
 
 
@@ -39,12 +37,11 @@ export class CargadatosComponent implements OnInit {
   
     Toast()
     {
-      this.toastr.success('Datos guardados correctamente','Toastr');
+      this.toastr.success('Datos guardados correctamente','Actualización');
     }
   
 
      update(formFeriado: NgForm): void {
-     
         // error subscribe
         //this.dataApi.update(formFeriado.value).subscribe(book => location.reload());
         this.Toast();
@@ -52,8 +49,6 @@ export class CargadatosComponent implements OnInit {
         {
           location.reload();
       },2000);
-        
-       
       }
    
   ngOnInit() { 
