@@ -10,6 +10,8 @@ import { NavbarCboComponent } from './navbar/navbar-cbo/navbar-cbo.component';
 import { ResultadosComponent } from './examenes/resultados/resultados.component';
 import {DataTablesModule} from 'angular-datatables';
 import { Puntos } from './pipes/puntos.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr';
 
 //service
 import { DataAPiService } from 'src/services/data-api.service';
@@ -46,6 +48,9 @@ const appRoutes: Routes=[
     RouterModule,
     RouterModule.forRoot(appRoutes),
     DataTablesModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+    
    
   ],
   providers: [DataAPiService, HttpClientModule],

@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.2.0",
+    "@angular/animations": "^7.2.8",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
@@ -34,6 +34,8 @@
     "jspdf": "^1.5.3",
     "jspdf-autotable": "^3.0.10",
     "jwt-decode": "^2.2.0",
+    "ng2-toastr": "^4.1.2",
+    "ngx-toastr": "^9.1.2",
     "popper.js": "^1.14.7",
     "rxjs": "~6.3.3",
     "sweetalert": "^2.1.2",

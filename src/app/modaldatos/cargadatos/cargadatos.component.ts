@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { DataAPiService } from '../../../services/data-api.service';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
@@ -6,6 +6,7 @@ import {Location} from '@angular/common';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
 import { FeriadosInterface } from '../../models/book-interface';
+import {ToastrService} from 'ngx-toastr';
 
 
 @Component({
@@ -31,19 +32,31 @@ export class CargadatosComponent implements OnInit {
   constructor(
     public dataApi: DataAPiService, 
     public location: Location,
-     ){}
+    public toastr: ToastrService
+     ){
+      
+     }
   
-
+    Toast()
+    {
+      this.toastr.success('Datos guardados correctamente','Toastr');
+    }
   
 
      update(formFeriado: NgForm): void {
      
         // error subscribe
         //this.dataApi.update(formFeriado.value).subscribe(book => location.reload());
-        location.reload()
+        this.Toast();
+        setTimeout(()=>
+        {
+          location.reload();
+      },2000);
+        
+       
       }
    
-  ngOnInit() {
+  ngOnInit() { 
   }
-
+ 
 }
