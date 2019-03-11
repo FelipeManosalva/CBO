@@ -11,9 +11,9 @@
       <div class="modal-body">
           <div  class="col text-center">
               <button type="button" (click)="PDF()"> <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></button>
-              <button type="button" (click)="fireEvent()"><i class="fa fa-file-excel-o" style="font-size:48px;color:green"></i></button>
+              
             </div>
-        <form id="contenidomodal" class="form-book" #formBook="ngForm" [formGroup]="form">
+        <form id="contenidomodal" class="form-book" #formFeriado="ngForm" (ngSubmit)="update(formFeriado)">
          <ul class="nav nav-tabs" id="tabContent">
            <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
            <li><a href="#TABDOS" data-toggle="tab">TABDOS</a></li>

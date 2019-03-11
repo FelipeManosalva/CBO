@@ -4,7 +4,8 @@ import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 import {Location} from '@angular/common';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { FeriadosInterface } from '../../models/book-interface';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./cargadatos.component.css']
 })
 export class CargadatosComponent implements OnInit {
-  form: FormGroup;
+  
 
   PDF(){
     html2canvas(document.getElementById('contenidomodal'), {
@@ -30,24 +31,18 @@ export class CargadatosComponent implements OnInit {
   constructor(
     public dataApi: DataAPiService, 
     public location: Location,
-    public fb : FormBuilder )
-    
-  {
-this.formControlls();
-  }
-  formControlls()
-  {
-    this.form = this.fb.group({
-        desc:'',
+     ){}
+  
 
-    })
+  
 
-  }
-
-  Guardar()
-  {
-       
-  }
+     update(formFeriado: NgForm): void {
+     
+        // error subscribe
+        //this.dataApi.update(formFeriado.value).subscribe(book => location.reload());
+        location.reload()
+      }
+   
   ngOnInit() {
   }
 
