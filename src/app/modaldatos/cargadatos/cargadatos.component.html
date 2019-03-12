@@ -13,13 +13,13 @@
               <button type="button" (click)="PDF()"> <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></button>
               
             </div>
-        <form id="contenidomodal" class="form-book" #formFeriado="ngForm" (ngSubmit)="update(formFeriado)">
+        <form  class="form-book" #formFeriado="ngForm" (ngSubmit)="update(formFeriado)">
          <ul class="nav nav-tabs" id="tabContent">
            <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
            <li><a href="#TABDOS" data-toggle="tab">TABDOS</a></li>
            <li><a href="#TABTRES" data-toggle="tab">TABTRES</a></li>
          </ul>
-         <div class="tab-content">
+         <div id="contenidomodal" class="tab-content">
           <div class="tab-pane active" id="TABUNO">
             <div class="form-row">
               <div class="form-group col-md-6">
