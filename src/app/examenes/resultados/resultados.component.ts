@@ -10,8 +10,8 @@ import * as html2canvas from 'html2canvas';
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
- 
   generarPDF(){
+    
     html2canvas(document.getElementById('contenido'), {
       allowTaint: true,
       useCORS: false,
@@ -24,7 +24,7 @@ export class ResultadosComponent implements OnInit {
       doc.save('datospdf.pdf');
    });
 }
- 
+
   @Input ('datos') book:FeriadosInterface;
   @ViewChild('datatable') content :  ElementRef;
   datatable: any;

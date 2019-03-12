@@ -24,3 +24,7 @@ li{
     border-bottom: rgb(94, 134, 245);
     padding: 0px 20px 0px 20px;
 }
+textarea {
+  font-family:  verdana;
+  font-size: 20pt;
+  }
