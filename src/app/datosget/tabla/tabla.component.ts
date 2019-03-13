@@ -4,7 +4,7 @@ import { FeriadosInterface } from '../../../app/models/book-interface';
 
 
 
-declare var $;
+//declare var $;
 
 @Component({
   selector: 'app-tabla',
@@ -15,8 +15,8 @@ export class TablaComponent implements OnInit {
 
  
    
-    @ViewChild('dataTable') table: ElementRef;
-  dataTable: any;
+   // @ViewChild('dataTable') table: ElementRef;
+  //dataTable: any;
   
   constructor(public dataApi: DataAPiService) { }
   public books: FeriadosInterface;
@@ -24,9 +24,9 @@ export class TablaComponent implements OnInit {
   ngOnInit(): void{
    
     
-    this.getListFeriados();
-    this.dataTable= $(this.table.nativeElement);
-    this.dataTable.dataTable();
+    //this.getListFeriados();
+    //this.dataTable= $(this.table.nativeElement);
+    //this.dataTable.dataTable();
   }
 
   getListFeriados() {
