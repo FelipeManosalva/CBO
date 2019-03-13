@@ -13,8 +13,16 @@ export class ResultadosComponent implements OnInit {
   generarPDF(){
     
     const doc = new jsPDF();
-    doc.autoTable({html: '#contenido'});
-    doc.save('table.pdf');
+    
+    
+    doc.autoTable({
+      margin: {top: 25},
+    theme:'grid',
+    html: '#contenido'
+  
+    });
+    doc.text(90, 20, 'PACIENTES');
+    doc.save('pacientes.pdf');
   }
 
   @Input ('datos') book:FeriadosInterface;
