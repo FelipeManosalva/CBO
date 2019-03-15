@@ -12,7 +12,7 @@ import {DataTablesModule} from 'angular-datatables';
 import { Puntos } from './pipes/puntos.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
-
+import {NgxPrintModule} from 'ngx-print';
 //service
 import { DataAPiService } from 'src/services/data-api.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -49,7 +49,8 @@ const appRoutes: Routes=[
     RouterModule.forRoot(appRoutes),
     DataTablesModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPrintModule
     
    
   ],

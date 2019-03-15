@@ -37,8 +37,9 @@
               "node_modules/jspdf/dist/jspdf.min.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js",
               "node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js",
-              "node_modules/html2canvas/dist/html2canvas.js"
-                        
+              "node_modules/html2canvas/dist/html2canvas.js",
+              "node_modules/table-to-excel/table-to-excel.js",
+              "node_modules/table2excel/dist/table2excel.js"         
             ],
             "es5BrowserSupport": true
           },
