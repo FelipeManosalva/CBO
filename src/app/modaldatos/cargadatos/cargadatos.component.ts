@@ -27,8 +27,8 @@ export class CargadatosComponent implements OnInit {
       var doc = new jsPDF('l', 'mm', 'letter');
      
       
-      doc.text(90, 20, 'MODAL PDF');
-      doc.addImage(img,'PNG',7, 40, 195, 110);
+      doc.text(120, 20, 'MODAL PDF');
+      doc.addImage(img,'PNG',100, 40, 100, 110,  );
       doc.save('datosmodal.pdf');
       
    });

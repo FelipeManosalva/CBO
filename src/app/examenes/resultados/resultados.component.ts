@@ -30,22 +30,15 @@ const table2excel = new Table2Excel({
 
 table2excel.export(document.querySelector('contenido'));
 }
-    
-   
-  
-  
-
   generarPDF(){
     
     const doc = new jsPDF('p', 'mm', 'letter');
-  
+    doc.text(90, 20, 'PACIENTES');
     doc.autoTable({
     margin: {top: 25},
     theme:'grid',
     html: '#contenido'
     });
-    
-    doc.text(90, 20, 'PACIENTES');
     doc.save('pacientes.pdf');
   }
 
@@ -54,8 +47,7 @@ table2excel.export(document.querySelector('contenido'));
   datatable: any;
   
   constructor(public dataApi: DataAPiService) { }
-  
-  
+    
   public books: FeriadosInterface;
   public ngOnInit(): void{
   this.getListFeriados();

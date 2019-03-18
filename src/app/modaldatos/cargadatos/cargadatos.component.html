@@ -11,8 +11,8 @@
       <div class="modal-body">
           <div  class="col text-center">
               <button type="button" (click)="PDF()"> <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></button>
-              
-            </div>
+          </div>
+          <br>
         <form  class="form-book" #formFeriado="ngForm" (ngSubmit)="update(formFeriado)">
          <ul class="nav nav-tabs" id="tabContent">
            <li><a href="#TABUNO" data-toggle="tab">TABUNO</a></li>
@@ -59,7 +59,7 @@
               <label for="descripcion">Descripcion</label>
               <textarea name="descripcion" id="descripcion" class="form-control" cols="50" rows="6" formControllerName="desc" ></textarea>
               <br>
-              <button type="submit" class="btn btn-primary float-right" (click)="Guarda" >Guardar cambios</button>
+              <button style="margin-left: 10px" type="submit" class="btn btn-primary float-right" (click)="Guarda" >Guardar cambios</button>
               
               <button type="submit" class="btn btn-primary float-right" data-dismiss="modal" >Cancelar</button>
             </div>
