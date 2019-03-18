@@ -37,7 +37,7 @@ table2excel.export(document.querySelector('contenido'));
 
   generarPDF(){
     
-    const doc = new jsPDF();
+    const doc = new jsPDF('p', 'mm', 'letter');
   
     doc.autoTable({
     margin: {top: 25},

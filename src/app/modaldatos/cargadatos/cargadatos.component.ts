@@ -5,6 +5,8 @@ import * as html2canvas from 'html2canvas';
 import {Location} from '@angular/common';
 import { NgForm } from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
+import { until } from 'protractor';
+import { format } from 'path';
 
 
 @Component({
@@ -22,7 +24,9 @@ export class CargadatosComponent implements OnInit {
       scale: 1
       }).then(function(canvas) {
       var img = canvas.toDataURL("image/png");
-      var doc = new jsPDF();
+      var doc = new jsPDF('l', 'mm', 'letter');
+     
+      
       doc.text(90, 20, 'MODAL PDF');
       doc.addImage(img,'PNG',7, 40, 195, 110);
       doc.save('datosmodal.pdf');
